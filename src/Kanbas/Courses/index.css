@@ -1,0 +1,10 @@
+.wd-courses .breadcrumb{
+    margin-top: 10px;
+    align-items: center;
+}
+.wd-courses .breadcrumb .icon{
+    font-size:2em;
+    margin-left:10px;
+    margin-right:20px;
+    color:red
+}

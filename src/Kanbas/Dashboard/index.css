@@ -1,0 +1,19 @@
+.wd-dashboard{
+    margin-left: 20px;   
+}
+.card{
+    margin:25px;
+    width:250px;
+}
+.card .card-color1{
+    height:120px;
+    background-color:rgb(243, 96, 96);
+}
+
+.card-body a{
+    text-decoration: none;
+    color: gray;
+}
+.card-title{
+    color:black;
+}

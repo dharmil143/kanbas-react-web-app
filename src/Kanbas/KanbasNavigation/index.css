@@ -1,0 +1,26 @@
+.wd-kanbasnavigation{
+    text-align: center;
+    margin-right: 20px;
+    padding: 0px;
+    background-color: black;
+    border-radius: 0px;
+}
+.wd-icon{
+    color:red;
+    font-size:2em;
+}
+.wd-account{
+    color:rgb(250, 246, 246);
+    font-size:2em;
+}
+.wd-kanbasnavigation .list-group-item{
+    background-color:black;
+    color:white;
+    border:0px;
+}
+.wd-kanbasnavigation a.active{
+    background-color:white;
+    text-decoration: none;
+    font: arial;
+    color:red;
+}
