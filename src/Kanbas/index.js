@@ -8,7 +8,7 @@ import Dashboard from "./Dashboard";
 function Kanbas() {
    return (
      <div className="d-flex">
-       <KanbasNavigation/>
+       <KanbasNavigation style={{height:100}}/>
        <div style={{flexGrow:1}}>
          <Routes>
          <Route path="/" element={<Navigate to="Dashboard" />} />

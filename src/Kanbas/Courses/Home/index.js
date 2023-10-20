@@ -6,11 +6,11 @@ function Home() {
   return (
     <div className="d-flex">
         <div>
-      <h2>Home</h2>
+      <hr/>
       <ModuleList />
       </div>
       <div>
-      <h2>Status</h2>
+      <h2 style={{marginLeft:20}}>Status</h2>
       </div>
     </div>
   );
