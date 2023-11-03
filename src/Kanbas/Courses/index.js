@@ -1,5 +1,4 @@
 import React from "react";
-import db from "../Database";
 import { Navigate, Route, Routes, useParams ,useLocation} from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
@@ -11,11 +10,11 @@ import {VscThreeBars} from "react-icons/vsc"
 import './index.css'
 
 
-function Courses() {
+function Courses({courses}) {
   const { courseId } = useParams();
   const location = useLocation().pathname;
   const s = location.split("/")
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className="wd-courses">
       <div className="d-flex breadcrumb">
@@ -25,7 +24,7 @@ function Courses() {
       <hr/>
       <div className="d-flex">
       <CourseNavigation />
-      <div style={{marginLeft:20}}>
+      <div style={{marginLeft:20,flexGrow:1}}>
         <div>
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
@@ -34,7 +33,7 @@ function Courses() {
             <Route path="Assignments" element={<Assignments/>} />
             <Route
               path="Assignments/:assignmentId"
-              element={<AssignmentEditor/>}
+              element={<AssignmentEditor style={{flexGrow:1}}/>}
             />
             <Route path="Grades" element={<Grades/>} />
             <Route path="Piazza" element={<h1>Piazza</h1>} />

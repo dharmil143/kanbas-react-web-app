@@ -4,18 +4,53 @@ import { Route,Routes,Navigate } from "react-router";
 import Account from "./Account";
 import Courses from "./Courses";
 import Dashboard from "./Dashboard";
+import db from "./Database";
+import { useState } from "react";
+import store from "./store";
+import { Provider } from "react-redux";
 
 function Kanbas() {
+  const [courses, setCourses] = useState(db.courses);
+  const [course, setCourse] = useState({
+    name: "New Course",      number: "New Number",
+    startDate: "2023-09-10", endDate: "2023-12-15",
+  });
+  const addNewCourse = () => {
+    setCourses([...courses, { ...course, _id: new Date().getTime().toString() }]);
+  };
+  const deleteCourse = (courseId) => {
+    setCourses(courses.filter((course) => course._id !== courseId));
+  };
+  const updateCourse = () => {
+    setCourses(
+      courses.map((c) => {
+        if (c._id === course._id) {
+          return course;
+        } else {
+          return c;
+        }
+      })
+    );
+  };
+
    return (
+    <Provider store={store}>
      <div className="d-flex">
        <KanbasNavigation style={{height:100}}/>
        <div style={{flexGrow:1}}>
          <Routes>
          <Route path="/" element={<Navigate to="Dashboard" />} />
          <Route path="/Account" element={<Account/>}></Route>
-         <Route path="/Dashboard" element={<Dashboard/>}></Route>
+         <Route path="/Dashboard" element={<Dashboard
+              courses={courses}
+              course={course}
+              setCourse={setCourse}
+              addNewCourse={addNewCourse}
+              deleteCourse={deleteCourse}
+              updateCourse={updateCourse}/>
+          }></Route>
          <Route path="/Courses" element={<h3>Courses</h3>}></Route>
-         <Route path="/Courses/:courseId/*" element={<Courses/>}></Route>
+         <Route path="/Courses/:courseId/*" element={<Courses courses={courses}/>}></Route>
          <Route path="/Calendar" element={<h1>Calendar</h1>}></Route>
          <Route path="/Inbox" element={<h1>Inbox</h1>}></Route>
          <Route path="/History" element={<h1>History</h1>}></Route>
@@ -25,6 +60,7 @@ function Kanbas() {
          </Routes>
        </div>
      </div>
+     </Provider>
    );
  }
  

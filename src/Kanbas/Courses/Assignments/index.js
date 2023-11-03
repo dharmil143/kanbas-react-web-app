@@ -16,7 +16,7 @@ function Assignments() {
           <Link
             key={assignment._id}
             to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item">
+            className="list-group-item" style={{width:300}}>
             {assignment.title}
           </Link>
         ))}

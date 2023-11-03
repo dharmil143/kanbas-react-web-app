@@ -29,7 +29,7 @@ function KanbasNavigation() {
 
   return (
     <div className="list-group wd-kanbasnavigation" style={{ width: 120 }}>
-        <img alt="Northeastern icon" className="list-group-item"src="/Kanbas/Northeastern-University-Emblem.png"/>
+        <img alt="Northeastern icon" className="list-group-item" src="/Kanbas/Northeastern-University-Emblem.png"/>
       {links.map((link, index) => (
         <Link
           key={index}

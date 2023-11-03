@@ -1,0 +1,22 @@
+.edititems-align label{
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    margin-right:20px;
+}
+.edititems-align input{
+    display: inline-block;
+}
+.edititems-align select{
+    display: inline-block;
+}
+.edititems-align a{
+    display: inline-block;
+}
+.edititems-align .group{
+    display: inline-block;
+    border-radius: 5px;
+}
+.edititems-align .group div{
+    margin:10px
+}
