@@ -10,11 +10,12 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades"
 import {VscThreeBars} from "react-icons/vsc"
 import './index.css'
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 
 function Courses() {
   const { courseId } = useParams();
-  const URL = "http://localhost:4000/api/courses";
+  const URL = `${API_BASE}$/api/courses`;
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
     const response = await axios.get(
