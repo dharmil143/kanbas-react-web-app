@@ -3,6 +3,7 @@ import Assignment3 from "./a3";
 import Nav from "../Nav";
 import { Route,Routes,Navigate } from "react-router";
 import Assignment4 from "./a4";
+import Assignment5 from "./a5";
 import store from "./store";
 import { Provider } from "react-redux";
 
@@ -19,6 +20,8 @@ function Labs() {
         element={<Assignment3/>}/>
        <Route path="a4"
         element={<Assignment4/>}/>
+        <Route path="a5"
+        element={<Assignment5/>}/>
      </Routes>
     </div>
     </Provider>
