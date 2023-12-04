@@ -51,14 +51,17 @@ function UserTable() {
           <tr>
             <th>Id</th>
             <th>Username</th>
+            <th>Password</th>
             <th>First Name</th>
             <th>Last Name</th>
           </tr>
           <tr>
             <td><input className="form-control" value={user._id} onChange={(e) => setUser({ ...user, _id: e.target.value })}/></td>
             <td>
-              <input className="form-control" value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })}/>
               <input className="form-control" value={user.username} onChange={(e) => setUser({ ...user, username: e.target.value })}/>
+            </td>
+            <td>
+            <input className="form-control" value={user.password} onChange={(e) => setUser({ ...user, password: e.target.value })}/>
             </td>
             <td>
               <input className="form-control" value={user.firstName} onChange={(e) => setUser({ ...user, firstName: e.target.value })}/>
