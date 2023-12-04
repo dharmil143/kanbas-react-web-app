@@ -39,21 +39,27 @@ function Account() {
       <h1>Account</h1>
       {account && (
         <div>
+          <label>Password : </label>
           <input className="form-control" value={account.password}
             onChange={(e) => setAccount({ ...account,
               password: e.target.value })}/>
+           <label>First Name : </label>   
           <input className="form-control" value={account.firstName}
             onChange={(e) => setAccount({ ...account,
               firstName: e.target.value })}/>
+           <label>Last Name : </label>    
           <input className="form-control" value={account.lastName}
             onChange={(e) => setAccount({ ...account,
               lastName: e.target.value })}/>
+           <label>Date Of Birth : </label>    
           <input className="form-control" value={account.dob}
             onChange={(e) => setAccount({ ...account,
               dob: e.target.value })}/>
+            <label>Email : </label>   
           <input className="form-control" value={account.email}
             onChange={(e) => setAccount({ ...account,
               email: e.target.value })}/>
+            <label>Role : </label>   
           <select className="form-control" onChange={(e) => setAccount({ ...account,
               role: e.target.value })}>
             <option value="USER">User</option>

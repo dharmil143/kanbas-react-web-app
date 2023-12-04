@@ -18,16 +18,19 @@ function Signup() {
     <div style={{margin:20}}>
       <h1>Signup</h1>
       {error && <div>{error}</div>}
+      <label>ID :</label>
       <input className="form-control"
         value={credentials._id}
         onChange={(e) => setCredentials({
           ...credentials,
           _id: e.target.value })} />
+      <label>Username :</label>
       <input className="form-control"
         value={credentials.username}
         onChange={(e) => setCredentials({
           ...credentials,
           username: e.target.value })} />
+       <label>Password :</label>   
       <input className="form-control"
         value={credentials.password}
         onChange={(e) => setCredentials({
