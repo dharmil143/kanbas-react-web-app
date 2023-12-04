@@ -12,7 +12,7 @@ const API_BASE = process.env.REACT_APP_API_BASE;
 
 function Kanbas() {
   const [courses, setCourses] = useState([]);
-  const URL = `https://kanbas-node-server-app-0njc.onrender.com/api/courses`;
+  const URL = `http://localhost:4000/api/courses`;
 
   const addNewCourse = async () => {
     const response = await axios.post(URL, course);
