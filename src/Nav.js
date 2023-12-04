@@ -9,6 +9,7 @@ function Nav() {
      <Link to="/Labs/a5" className={`nav-link ${pathname.includes("/a5") ? "active" : "/Labs"}`}>A5</Link>
      <Link to="/hello" className={`nav-link ${pathname.includes("/hello") ? "active" : "/hello"}`}>Hello</Link>
      <Link to="/Kanbas" className={`nav-link ${pathname.includes("/Kanbas") ? "active" : "/Kanbas"}`}>Kanbas</Link>
+     <Link to="/Project A6" className={`nav-link ${pathname.includes("/project") ? "active" : "/project"}`}>Kanbas</Link>
    </nav>
  );
 }
